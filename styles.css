@@ -5,6 +5,10 @@
   color: hsl(228, 45%, 44%);
 }
 
+body {
+  min-width: 200px;
+}
+
 @media screen and (min-width: 1440px) {
   body {
     margin: 0 auto 0 auto;
@@ -32,6 +36,33 @@
   margin: 0;
   width: 100%;
   margin: 25px 0 30px 0;
+  vertical-align: center;
+  line-height: 30px;
+}
+
+.navigation-menue .nav-float-left {
+  float: left;
+  position: relative;
+  list-style: none;
+  display: inline;
+}
+
+.navigation-menue .nav-float-left li {
+  float: left;
+  position: relative;
+  display: inline;
+}
+
+.navigation-menue .nav-float-right {
+  float: right;
+  list-style: none;
+  display: inline;
+}
+
+.navigation-menue .nav-float-right li {
+  float: left;
+  position: relative;
+  display: inline;
 }
 
 .navigation-menue a {
@@ -40,40 +71,39 @@
   font-size: 0.8rem;
   text-decoration: none;
   margin-left: 35px;
-  border-radius: 15px;
 }
 
-.navigation-menue a:first-child {
+.nav-float-left .logo {
   font-size: 30px;
   color: hsl(0, 0%, 8%);
   font-weight: bold;
   margin: 0 25px 0 30px;
 }
 
-.navigation-menue  a:nth-child(6) {
-  margin-left: 44%;
+.navigation-menue .nav-float-right a {
+  float: left;
 }
 
-@media screen and (max-width: 1250px) {
-  .navigation-menue a:nth-child(6) {
-    margin-left: 25%;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .navigation-menue a:nth-child(6) {
-    margin-left: 10%;
-  }
-}
-
-.navigation-menue a:last-child {
+.navigation-menue .nav-float-right li:nth-child(2) a {
   border-width: 2px;
   border-style: solid;
-  width: 150px;
-  line-height: 40px;
+  width: 100px;
   text-align: center;
-  padding: 10px 20px 10px 20px !important;
   border-radius: 13px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-float-left {
+    float: none;
+    display: block;
+  }
+ .nav-float-right {
+    float: none;
+    display: block;
+  }
+  
+
 }
 
 .content h1 {
