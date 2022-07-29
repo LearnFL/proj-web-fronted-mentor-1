@@ -1,10 +1,13 @@
-
 // Drop-Down Menu
 $(document).ready(function(){
   $(".jq-drop").hover(function(){
     var hovered = $(".jq-drop").is(":hover");
     var hov = $(".dropdown-company").is(":hover");
-    if (hovered || hov) {
+    if (hovered) {
+      $(".dropdown-company").show("fast");
+      $('.jq-drop > img').attr("src", "./images/icon-arrow-up.svg");
+    }
+    if (hovered && hov) {
       $(".dropdown-company").show("fast");
       $('.jq-drop > img').attr("src", "./images/icon-arrow-up.svg");
     }else {
