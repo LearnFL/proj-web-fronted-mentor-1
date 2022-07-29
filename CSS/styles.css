@@ -1,23 +1,15 @@
 body {
-  min-width: 200px;
+  min-width: 300px;
+  font-family: 'Epilogue', arial, sans-serif;
 }
 
 @media screen and (min-width: 1440px) {
   body {
     margin: 0 auto 0 auto;
     background-color: hsl(0, 0%, 55%);
-    font-family: 'Epilogue', arial, sans-serif;
     font-size: 18px;
     height: 900px;
   }
-}
-
-.attribution {
-  font-size: 11px; text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
 
 .wrapper {
@@ -31,7 +23,20 @@ body {
   padding-bottom: 0px;
 }
 
-.navigation-menue {
+.menu-bar {
+  visibility: hidden;
+}
+
+.close-icon {
+  display: none;
+  opacity: 1;
+  position: fixed;
+  margin-left: 90%;
+  padding-top: 5%;
+  z-index: 5;
+}
+
+nav {
   position: relative;
   display: inline-block;
   margin: 0;
@@ -41,35 +46,13 @@ body {
   line-height: 30px;
 }
 
-.navigation-menue .nav-float-left {
-  float: left;
-  position: relative;
-  list-style: none;
-  display: inline;
+@media screen and (min-width: 881px) and (max-width: 1900px) {
+  nav {
+    visibility: visible !important;
+  }
 }
 
-.dropdown-features > li img {
-  margin-right: 10px;
-}
-.navigation-menue .nav-float-left li {
-  float: left;
-  position: relative;
-  display: inline;
-}
-
-.navigation-menue .nav-float-right {
-  float: right;
-  list-style: none;
-  display: inline;
-}
-
-.navigation-menue .nav-float-right li {
-  float: left;
-  position: relative;
-  display: inline;
-}
-
-.navigation-menue a {
+nav a {
   position: relative;
   color: hsl(0, 0%, 41%);
   font-size: 0.8rem;
@@ -77,22 +60,51 @@ body {
   margin-left: 35px;
 }
 
-nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
-  color: hsl(0, 0%, 8%);
-}
-
-.nav-float-left .logo {
+.logo {
   font-size: 30px;
   color: hsl(0, 0%, 8%);
   font-weight: bold;
   margin: 0 25px 0 30px;
 }
 
-.navigation-menue .nav-float-right a {
+/* Menu Float Left */
+
+.nav-float-left {
+  float: left;
+  position: relative;
+  list-style: none;
+  display: inline;
+}
+
+.nav-float-left li {
+  float: left;
+  position: relative;
+  display: inline;
+}
+
+.dropdown-features > li img {
+  margin-right: 10px;
+}
+
+/* Menu Float Right */
+
+.nav-float-right {
+  float: right;
+  list-style: none;
+  display: inline;
+}
+
+.nav-float-right li {
+  float: left;
+  position: relative;
+  display: inline;
+}
+
+.nav-float-right a {
   float: left;
 }
 
-.navigation-menue .nav-float-right li:nth-child(2) a {
+.nav-float-right li:nth-child(2) a {
   border-width: 2px;
   border-style: solid;
   width: 100px;
@@ -101,84 +113,12 @@ nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 683px) {
-  .nav-float-left {
-    float: none;
-    display: block;
-  }
-
- .nav-float-right {
-    float: none;
-    display: block;
-  }
-}
-
-.content h1 {
-  font-size: 4.5rem;
-  max-width: 600px;
-  margin-left: 120px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.nav-float-left > li a:hover, .nav-float-right > li a:hover {
   color: hsl(0, 0%, 8%);
 }
 
-.content:nth-child(2) {
-  margin-top: 50px;
-}
+/*Dropdown menu: CSS */
 
-.content p {
-  font-size: 4.5rem;
-  max-width: 450px;
-  margin-left: 120px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  color: hsl(0, 0%, 41%);
-  font-size: 1.125rem;
-  line-height: 30px;
-  margin-top: 50px;
-}
-
-.content a {
-  background-color: hsl(0, 0%, 8%);
-  color: hsl(0, 0%, 98%);
-  padding: 20px 30px 20px 30px;
-  width: 200px;
-  text-decoration: none;
-  border-radius: 13px;
-}
-
-.background-image {
-  width: 30%;
-  float: right;
-  margin-right: 120px;
-}
-
-@media screen and (max-width: 800px) {
-  .content > img {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display:block;
-    margin-top: 10px;
-    margin-bottom: 50px;
-
-  }
-}
-
-.logos-bottom {
-  position: relative;
-  margin: 150px 0 0 120px;
-}
-
-.attribution {
-  position: relative;
-  margin: 130px auto 0 auto;
-  line-height: 20pt;
-  text-align: center;
-}
-
-/* 2 versions of dropdown menu: CSS and JavaScript*/
 .dropdown-features li {
  display: block;
  transition-duration: 0.5s;
@@ -209,7 +149,6 @@ nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: left
-
 }
 
 .dropdown-features li:first-child {
@@ -220,7 +159,8 @@ nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
   border-radius: 13px;
 }
 
-/* JavaScript */
+/* Dropdown Menu: JavaScript */
+
 .dropdown-company li {
  display: block;
  transition-duration: 0.5s;
@@ -241,7 +181,6 @@ nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
   right: 50px;
   margin-right: 0;
   padding-right: 0;
-
 }
 
 .dropdown-company li:first-child {
@@ -250,4 +189,366 @@ nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
 
 .dropdown-company {
   border-radius: 13px;
+}
+
+/* Menue Tablet Screen */
+
+@media screen and (max-width: 950px) {
+  .nav-float-left {
+    float: none;
+    display: block;
+  }
+
+ .nav-float-right {
+    float: none;
+    display: block;
+  }
+}
+
+/* Navigation Menue On Cell Phone Screen  */
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu-bar {
+    opacity: 0.5;
+    position: fixed;
+    visibility: visible;
+    margin-left: 90%;
+    padding-top: 2%;
+  }
+
+  nav {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    display: block;
+    width: 80%;
+    margin-left: 0 0 0 20%;
+    padding-right: 0;
+    height: 100%;
+    background-color: white;
+    text-align: left;
+    top: 0;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  /* Menu Float Left */
+
+  .logo {
+    visibility: hidden;
+  }
+
+  .nav-float-left{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-float-left li {
+    float: none;
+    display: block;
+  }
+
+  .nav-float-left a {
+    float: none;
+    display: block;
+  }
+
+  /* Menu Float Right */
+
+  .nav-float-right {
+    float: none;
+    display: block;
+    text-align: center;
+    position: relative;
+    max-width: 25%;
+  }
+
+  .nav-float-right li {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+   .nav-float-right > li > a {
+    float: none;
+    text-align: center;
+  }
+
+  .nav-float-right li:nth-child(2) a {
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    border-radius: 13px;
+    margin-right: 20px;
+    float: none;
+    padding: 10% 15% 10% 15%;
+  }
+
+  .nav-float-left li:hover > .dropdown-features,
+  .nav-float-left li .dropdown-features:hover {
+    position: relative;
+    text-align: left;
+    margin-right: 35%;
+  }
+
+  .dropdown-company {
+    position: relative;
+    text-align: left;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu-bar {
+    opacity: 0.5;
+    position: fixed;
+    visibility: visible;
+    margin-left: 90%;
+    padding-top: 2%;
+  }
+
+  nav {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    display: block;
+    max-width: 40%;
+    margin: 0 0 0 60%;
+    padding: 0;
+    height: 100%;
+    background-color: white;
+    text-align: left;
+    top: 0;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  /* Menu Float Left */
+
+  .logo {
+    visibility: hidden;
+  }
+
+  .nav-float-left{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-float-left li {
+    float: none;
+    display: block;
+  }
+
+  .nav-float-left a {
+    float: none;
+    display: block;
+  }
+
+  /* Menu Float Right */
+
+  .nav-float-right {
+    float: none;
+    display: block;
+    text-align: center;
+    position: relative;
+    max-width: 25%;
+  }
+
+  .nav-float-right li {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+  }
+
+   .nav-float-right > li > a {
+    float: none;
+    text-align: center;
+  }
+
+  .nav-float-right li:nth-child(2) a {
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    border-radius: 13px;
+    float: none;
+    margin-right: 0;
+    padding: 10% 15% 10% 15%;
+  }
+
+  .nav-float-left li:hover > .dropdown-features,
+  .nav-float-left li .dropdown-features:hover {
+    position: relative;
+    text-align: left;
+    margin-right: 70%;
+  }
+
+  .dropdown-company {
+    position: relative;
+    text-align: left;
+    margin-left: 7%;
+    width: 30%;
+  }
+}
+
+/* Content */
+
+.content h1 {
+  font-weight: 700;
+  font-size: 4.5rem;
+  max-width: 50%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: hsl(0, 0%, 8%);
+}
+
+.content:nth-child(2) {
+  margin-top: 50px;
+}
+
+.content {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.main-content {
+  margin-left: 7%;
+}
+
+.main-content p {
+  font-size: 4.5rem;
+  max-width: 35%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: hsl(0, 0%, 41%);
+  font-size: 1.125rem;
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.main-content a {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  padding: 20px 30px 20px 30px;
+  width: 200px;
+  text-decoration: none;
+  border-radius: 13px;
+}
+
+.background-image {
+  width: 30%;
+  float: right;
+  margin-right: 120px;
+}
+
+@media screen and (max-width: 900px) {
+  .content > img {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    width: 60%;
+  }
+
+  .main-content h1, .main-content p {
+    margin: 0 auto 0 auto;
+    max-width: 90%;
+  }
+
+  .main-content p:last-child {
+    margin-top: 15%;
+  }
+
+  .main-content {
+    margin: 0 auto 0 auto;
+    text-align: center;
+  }
+
+  .main-content h1 {
+    padding-bottom: 5%;
+  }
+  .content {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content > img {
+    margin-bottom: 15%;
+  }
+
+  .main-content h1{
+    font-size: 2.5rem;
+  }
+
+  .main-content p {
+    padding-top: 3%;
+  }
+}
+
+.logos-bottom {
+  position: relative;
+  margin: 150px 0 0 120px;
+}
+
+@media screen and (max-width: 900px) {
+  .logos-bottom {
+    position: relative;
+    text-align: center;
+    margin: 150px auto auto 0px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .logos-bottom {
+    position: relative;
+    text-align: center;
+    margin: 100px auto auto 0px;
+  }
+}
+
+.attribution {
+  position: relative;
+  margin: 130px auto 0 auto;
+  line-height: 20pt;
+  text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+  .attribution {
+    margin: 50px auto auto 0px;
+  }
+}
+.attribution {
+  font-size: 10px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
