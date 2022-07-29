@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -7,27 +8,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/script.js" type="text/javascript"></script>
+
   <!--<link type="text/css" rel="stylesheet" media="screen and (max-width: 682px)" href="../Stylesheet/300.css" />-->
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
+
 <body>
   <div class="wrapper">
     <nav class="navigation-menue">
-        <ul class="nav-float-left">
-          <li ><a class="logo" href ='#'>snap</a></li>
-          <li><a href ='#'>Features  <img src="./images/icon-arrow-down.svg"></a></li>
-          <li><a href ='#'>Company  <img src="./images/icon-arrow-down.svg"></a></li>
-          <li><a href ='#'>Careers</a></li>
-          <li><a href ='#'>About</a></li>
+      <ul class="nav-float-left">
+        <li><a class="logo" href='#'>snap</a></li>
+        <li class="menu-features"=><a href='#'>Features <img src="./images/icon-arrow-down.svg"></a>
+          <ul class="dropdown-features">
+            <li><a class="test" href="#"><img alt="menu icon" src="./images/icon-todo.svg"> Todo List</a></li>
+            <li><a href="#"><img alt="menu icon" src="./images/icon-calendar.svg"> Calendar</a></li>
+            <li><a href="#"><img alt="menu icon" src="./images/icon-reminders.svg"> Reminders</a></li>
+            <li><a href="#"><img alt="menu icon" src="./images/icon-planning.svg"> Planning</a></li>
           </ul>
-        <ul class="nav-float-right">
-          <li><a class="float-right" href ='#'>Login</a></li>
-          <li><a class="float-right" href ='#'>Register</a></li>
-        </ul> 
+        </li>
+        <li><a class="jq-drop" href='#'>Company <img src="./images/icon-arrow-down.svg"></a>
+          <ul class="dropdown-company">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href='#'>Careers</a></li>
+        <li><a href='#'>About</a></li>
+      </ul>
+      <ul class="nav-float-right">
+        <li><a class="float-right" href='#'>Login</a></li>
+        <li><a class="float-right" href='#'>Register</a></li>
+      </ul>
     </nav>
     <div class="content">
-      <img src="./images/image-hero-desktop.png" alt="background immage">
+      <img class="background-image" src="./images/image-hero-desktop.png" alt="background immage">
       <div>
         <h1>Make</h1>
         <h1>remote work</h1>
@@ -36,9 +54,9 @@
           create team rituals, and watch productivity soar.
         </p>
         <p>
-          <a href="#" alt="learn more" > Learn more</a>
+          <a href="#" alt="learn more"> Learn more</a>
         </p>
-    </div>
+      </div>
     </div>
     <div class="logos-bottom">
       <img src="./images/client-databiz.svg" alt="logo">
@@ -52,4 +70,5 @@
     </div>
   </div>
 </body>
+
 </html>

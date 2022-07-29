@@ -1,0 +1,253 @@
+body {
+  min-width: 200px;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    margin: 0 auto 0 auto;
+    background-color: hsl(0, 0%, 55%);
+    font-family: 'Epilogue', arial, sans-serif;
+    font-size: 18px;
+    height: 900px;
+  }
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.wrapper {
+  position: relative;
+  background-color: hsl(0, 0%, 98%);
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.navigation-menue {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  margin: 25px 0 30px 0;
+  vertical-align: center;
+  line-height: 30px;
+}
+
+.navigation-menue .nav-float-left {
+  float: left;
+  position: relative;
+  list-style: none;
+  display: inline;
+}
+
+.dropdown-features > li img {
+  margin-right: 10px;
+}
+.navigation-menue .nav-float-left li {
+  float: left;
+  position: relative;
+  display: inline;
+}
+
+.navigation-menue .nav-float-right {
+  float: right;
+  list-style: none;
+  display: inline;
+}
+
+.navigation-menue .nav-float-right li {
+  float: left;
+  position: relative;
+  display: inline;
+}
+
+.navigation-menue a {
+  position: relative;
+  color: hsl(0, 0%, 41%);
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+nav .nav-float-left > li a:hover, nav .nav-float-right > li a:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+.nav-float-left .logo {
+  font-size: 30px;
+  color: hsl(0, 0%, 8%);
+  font-weight: bold;
+  margin: 0 25px 0 30px;
+}
+
+.navigation-menue .nav-float-right a {
+  float: left;
+}
+
+.navigation-menue .nav-float-right li:nth-child(2) a {
+  border-width: 2px;
+  border-style: solid;
+  width: 100px;
+  text-align: center;
+  border-radius: 13px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 683px) {
+  .nav-float-left {
+    float: none;
+    display: block;
+  }
+
+ .nav-float-right {
+    float: none;
+    display: block;
+  }
+}
+
+.content h1 {
+  font-size: 4.5rem;
+  max-width: 600px;
+  margin-left: 120px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: hsl(0, 0%, 8%);
+}
+
+.content:nth-child(2) {
+  margin-top: 50px;
+}
+
+.content p {
+  font-size: 4.5rem;
+  max-width: 450px;
+  margin-left: 120px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: hsl(0, 0%, 41%);
+  font-size: 1.125rem;
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.content a {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  padding: 20px 30px 20px 30px;
+  width: 200px;
+  text-decoration: none;
+  border-radius: 13px;
+}
+
+.background-image {
+  width: 30%;
+  float: right;
+  margin-right: 120px;
+}
+
+@media screen and (max-width: 800px) {
+  .content > img {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+  }
+}
+
+.logos-bottom {
+  position: relative;
+  margin: 150px 0 0 120px;
+}
+
+.attribution {
+  position: relative;
+  margin: 130px auto 0 auto;
+  line-height: 20pt;
+  text-align: center;
+}
+
+/* 2 versions of dropdown menu: CSS and JavaScript*/
+.dropdown-features li {
+ display: block;
+ transition-duration: 0.5s;
+}
+
+.dropdown-features {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 0;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-float-left li:hover > .dropdown-features,
+.nav-float-left li .dropdown-features:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  background-color: white;
+}
+
+.dropdown-features li {
+  clear: both;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left
+
+}
+
+.dropdown-features li:first-child {
+  padding-top: 10px;
+}
+
+.dropdown-features {
+  border-radius: 13px;
+}
+
+/* JavaScript */
+.dropdown-company li {
+ display: block;
+ transition-duration: 0.5s;
+}
+
+.dropdown-company {
+  display: none;
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 0;
+  background-color: white;
+  border-radius: 13px;
+}
+
+.dropdown-company li {
+  clear: both;
+  width: 100px;
+  right: 50px;
+  margin-right: 0;
+  padding-right: 0;
+
+}
+
+.dropdown-company li:first-child {
+  padding-top: 10px;
+}
+
+.dropdown-company {
+  border-radius: 13px;
+}
