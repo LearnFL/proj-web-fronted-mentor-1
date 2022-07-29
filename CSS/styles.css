@@ -53,6 +53,7 @@ nav {
   nav {
     visibility: visible !important;
   }
+
   .close-icon {
     display: none !important;
   }
@@ -197,6 +198,14 @@ nav a {
   border-radius: 13px;
 }
 
+/* Comment out to switch to JavScript for dropdown-company */
+.nav-float-left li:hover > .dropdown-company,
+.nav-float-left li .dropdown-company:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  background-color: white;
+}
 /* Menue Tablet Screen */
 
 @media screen and (max-width: 950px) {
