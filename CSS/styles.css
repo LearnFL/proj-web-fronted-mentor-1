@@ -3,6 +3,9 @@ body {
   font-family: 'Epilogue', arial, sans-serif;
 }
 
+.show {
+  display: block;
+}
 @media screen and (min-width: 1440px) {
   body {
     margin: 0 auto 0 auto;
@@ -49,6 +52,9 @@ nav {
 @media screen and (min-width: 881px) and (max-width: 1900px) {
   nav {
     visibility: visible !important;
+  }
+  .close-icon {
+    display: none !important;
   }
 }
 

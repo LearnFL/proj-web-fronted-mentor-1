@@ -1,17 +1,17 @@
+
 // Drop-Down Menu
 $(document).ready(function(){
   $(".jq-drop").hover(function(){
     var hovered = $(".jq-drop").is(":hover");
     var hov = $(".dropdown-company").is(":hover");
-    if (hovered) {
+    if (hovered || hov) {
       $(".dropdown-company").show("fast");
+      // $(".dropdown-company").addClass("show");
       $('.jq-drop > img').attr("src", "./images/icon-arrow-up.svg");
     }
-    if (hovered && hov) {
-      $(".dropdown-company").show("fast");
-      $('.jq-drop > img').attr("src", "./images/icon-arrow-up.svg");
-    }else {
+    else{
       $(".dropdown-company").hide("fast");
+      // $(".dropdown-company").removeClass("show");
       $('.jq-drop > img').attr("src", "./images/icon-arrow-down.svg");
     }
   });
@@ -29,7 +29,7 @@ $(document).ready(function() {
   });
 });
 
-// Show Menu
+// Show Mobile Menu
 $(document).ready(function(){
   $('.close-icon').hide('fast');
   if ($('nav').css("visibility") == 'hidden') {
@@ -41,7 +41,7 @@ $(document).ready(function(){
   }
 });
 
-// Hide Menu
+// Hide Mobile Menu
 $(document).ready(function(){
   if ($('.menu-bar:hidden') && ($('.close-icon:visible'))) {
     $('.close-icon').click(function(){
