@@ -1,23 +1,4 @@
 
-// Drop-Down Menu
-// Uncomment to use JavaScript for dropdown-company
-// $(document).ready(function(){
-//   $(".jq-drop").hover(function(){
-//     var hovered = $(".jq-drop").is(":hover");
-//     var hov = $(".dropdown-company").is(":hover");
-//     if (hovered || hov) {
-//       $(".dropdown-company").show("fast");
-//       // $(".dropdown-company").addClass("show");
-//       $('.jq-drop > img').attr("src", "./images/icon-arrow-up.svg");
-//     }
-//     else{
-//       $(".dropdown-company").hide("fast");
-//       // $(".dropdown-company").removeClass("show");
-//       $('.jq-drop > img').attr("src", "./images/icon-arrow-down.svg");
-//     }
-//   });
-// });
-
 // Arrow Icons
 $(document).ready(function() {
   $('.menu-features').hover(function() {
@@ -53,3 +34,23 @@ $(document).ready(function(){
     });
   }
 });
+
+
+// Drop-Down Menu
+// Uncomment to use JavaScript for dropdown-company
+// $(document).ready(function(){
+//   $(".jq-drop").hover(function(){
+//     var hovered = $(".jq-drop").is(":hover");
+//     var hov = $(".dropdown-company").is(":hover");
+//     if (hovered || hov) {
+//       $(".dropdown-company").show("fast");
+//       // $(".dropdown-company").addClass("show");
+//       $('.jq-drop > img').attr("src", "./images/icon-arrow-up.svg");
+//     }
+//     else{
+//       $(".dropdown-company").hide("fast");
+//       // $(".dropdown-company").removeClass("show");
+//       $('.jq-drop > img').attr("src", "./images/icon-arrow-down.svg");
+//     }
+//   });
+// });

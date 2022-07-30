@@ -6,6 +6,7 @@ body {
 .show {
   display: block;
 }
+
 @media screen and (min-width: 1440px) {
   body {
     margin: 0 auto 0 auto;
@@ -199,6 +200,7 @@ nav a {
 }
 
 /* Comment out to switch to JavScript for dropdown-company */
+
 .nav-float-left li:hover > .dropdown-company,
 .nav-float-left li .dropdown-company:hover {
   visibility: visible;
@@ -220,7 +222,7 @@ nav a {
   }
 }
 
-/* Navigation Menue On Cell Phone Screen  */
+/* Navigation Menue On Cell Phone Screen */
 
 @media screen and (max-width: 375px) {
   .wrapper {
