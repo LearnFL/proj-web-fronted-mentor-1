@@ -9,6 +9,15 @@ $(document).ready(function() {
       $('.menu-features > a > img').attr("src", "./images/icon-arrow-down.svg");
     }
   });
+
+  $('.jq-drop').hover(function() {
+    var hovered = $('.jq-drop').is(":hover");
+    if (hovered) {
+      $('.jq-drop > a > img').attr("src", "./images/icon-arrow-up.svg");
+    } else {
+      $('.jq-drop > a > img').attr("src", "./images/icon-arrow-down.svg");
+    }
+  });
 });
 
 // 'click touchstart'
