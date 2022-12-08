@@ -59,7 +59,7 @@ There is plenty to learn and get better in.
 
 ## Author
 
-- Website - Dennis Rotnov
+- Website - [Dennis Rotnov](www.dennisrotnov.com)
 - Frontend Mentor - [@LearnFL](https://www.frontendmentor.io/profile/yourusername)
 - Instagram - [@dennis_r2018](https://www.instagram.com/dennis_r2018)
 
