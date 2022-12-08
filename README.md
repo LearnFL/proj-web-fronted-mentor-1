@@ -65,4 +65,4 @@ There is plenty to learn and get better in.
 
 ## Acknowledgments
 
-Thanks Fronted Mentor for the challenge.
+Thanks Fronted Mentor for the challenge and provided materials.
