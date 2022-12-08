@@ -59,7 +59,7 @@ There is plenty to learn and get better in.
 
 ## Author
 
-- Website - <a href='www.dennisrotnov.com'>home page</a>
+- Website - <a href='https://www.dennisrotnov.com'>home page</a>
 - Frontend Mentor - [@LearnFL](https://www.frontendmentor.io/profile/yourusername)
 - Instagram - [@dennis_r2018](https://www.instagram.com/dennis_r2018)
 
